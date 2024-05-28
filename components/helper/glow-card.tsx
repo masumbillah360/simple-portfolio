@@ -3,8 +3,8 @@ import { ReactNode, useEffect } from 'react';
 
 const GlowCard = ({ children , identifier}: { children: ReactNode, identifier: any}) => {
   useEffect(() => {
-    const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
-    const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
+    const CONTAINER = window.document.querySelector(`.glow-container-${identifier}`);
+    const CARDS = window.document.querySelectorAll(`.glow-card-${identifier}`);
 
     const CONFIG = {
       proximity: 40,
@@ -47,7 +47,7 @@ const GlowCard = ({ children , identifier}: { children: ReactNode, identifier: a
       }
     };
 
-    document.body.addEventListener('pointermove', UPDATE);
+    window.document.body.addEventListener('pointermove', UPDATE);
 
     const RESTYLE = () => {
       // @ts-ignore
@@ -68,7 +68,7 @@ const GlowCard = ({ children , identifier}: { children: ReactNode, identifier: a
 
     // Cleanup event listener
     return () => {
-      document.body.removeEventListener('pointermove', UPDATE);
+      window.document.body.removeEventListener('pointermove', UPDATE);
     };
   }, [identifier]);
 

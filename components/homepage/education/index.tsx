@@ -4,9 +4,8 @@ import { BsPersonWorkspace } from "react-icons/bs";
 
 import { educations } from "@/utils/data/educations";
 import lottieFile from '@/public/lottie/study.json';
-
-import AnimationLottie from "@/components/helper/animation-lottie";
 import GlowCard from "@/components/helper/glow-card";
+import AnimationLottieNoSSR from "@/components/helper/animation-lottie-client";
 
 function Education() {
   return (
@@ -38,7 +37,7 @@ function Education() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
             <div className="w-3/4 h-3/4">
-              <AnimationLottie animationPath={lottieFile} />
+              <AnimationLottieNoSSR animationPath={lottieFile} />
             </div>
           </div>
 
