@@ -6,38 +6,10 @@ import Experience from '@/components/homepage/experience';
 import HeroSection from '@/components/homepage/hero-section';
 import Projects from '@/components/homepage/projects';
 import Skills from '@/components/homepage/skills';
-import Image from 'next/image';
+import { blogsData } from '@/utils/data/blog-data';
 
 export default function Home() {
-    const blogs = [
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-        {
-            title: 'Title',
-        },
-    ];
+ 
     return (
         <>
             <HeroSection />
@@ -46,7 +18,7 @@ export default function Home() {
             <Skills />
             <Projects />
             <Education />
-            <Blog blogs={blogs} />
+            <Blog blogs={blogsData} />
             <ContactSection />
         </>
     );
