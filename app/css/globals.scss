@@ -20,15 +20,17 @@ body {
 
 #sticky-card-1 {
     --index: 1;
-    padding-top: calc(var(--index) * 4rem);
+    padding-top: 4rem;
 }
 
 #sticky-card-2 {
     --index: 2;
+    padding-top: 4rem;
 }
 
 #sticky-card-3 {
     --index: 3;
+    padding-top: 4rem;
 }
 
 #sticky-card-4 {

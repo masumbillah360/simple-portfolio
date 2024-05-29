@@ -1,4 +1,3 @@
-// @flow strict
 import { timeConverter } from '@/utils/time-converter';
 import Image from 'next/image';
 import Link from 'next/link';

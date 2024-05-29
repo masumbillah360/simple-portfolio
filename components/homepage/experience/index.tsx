@@ -1,5 +1,3 @@
-// @flow strict
-
 import Image from 'next/image';
 import { BsPersonWorkspace } from 'react-icons/bs';
 

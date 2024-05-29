@@ -1,10 +1,10 @@
-// @flow strict
-
+import Link from 'next/link';
 import * as React from 'react';
+import { FaGlobe } from 'react-icons/fa';
 
-function ProjectCard({ project }: Readonly<{ project: any }>) {
+function ProjectDescriptionCard({ project }: Readonly<{ project: any }>) {
     return (
-        <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
+        <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full h-full">
             <div className="flex flex-row">
                 <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
                 <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -15,9 +15,13 @@ function ProjectCard({ project }: Readonly<{ project: any }>) {
                     <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
                     <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
                 </div>
+
                 <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
                     {project.name}
                 </p>
+                <Link href={'/'}>
+                    <FaGlobe className="h-7 w-7 animate-spin absolute top-1/3 right-4 text-orange-300" />
+                </Link>
             </div>
             <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
                 <code className="font-mono text-xs md:text-sm lg:text-base">
@@ -27,7 +31,7 @@ function ProjectCard({ project }: Readonly<{ project: any }>) {
                         <span className="mr-2 text-pink-500">=</span>
                         <span className="text-gray-400">{'{'}</span>
                     </div>
-                    <div>
+                    <div className="my-1">
                         <span className="ml-4 lg:ml-8 mr-2 text-white">
                             name:
                         </span>
@@ -36,7 +40,7 @@ function ProjectCard({ project }: Readonly<{ project: any }>) {
                         <span className="text-gray-400">{`',`}</span>
                     </div>
 
-                    <div className="ml-4 lg:ml-8 mr-2">
+                    <div className="ml-4 lg:ml-8 mr-2 my-1">
                         <span className=" text-white">tools:</span>
                         <span className="text-gray-400">{` ['`}</span>
                         {project.tools.map((tag: any, i: number) => (
@@ -49,14 +53,14 @@ function ProjectCard({ project }: Readonly<{ project: any }>) {
                         ))}
                         <span className="text-gray-400">{'],'}</span>
                     </div>
-                    <div>
+                    <div className="my-1">
                         <span className="ml-4 lg:ml-8 mr-2 text-white">
                             myRole:
                         </span>
                         <span className="text-orange-400">{project.role}</span>
                         <span className="text-gray-400">,</span>
                     </div>
-                    <div className="ml-4 lg:ml-8 mr-2">
+                    <div className="ml-4 lg:ml-8 mr-2 my-1">
                         <span className="text-white">Description:</span>
                         <span className="text-cyan-400">
                             {' ' + project.description}
@@ -72,4 +76,4 @@ function ProjectCard({ project }: Readonly<{ project: any }>) {
     );
 }
 
-export default ProjectCard;
+export default ProjectDescriptionCard;

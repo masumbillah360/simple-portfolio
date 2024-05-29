@@ -1,5 +1,5 @@
 import { projectsData } from '@/utils/data/projects-data';
-import ProjectCard from './project-card';
+import ProjectDescriptionCard from './project-card';
 
 const Projects = () => {
     return (
@@ -17,14 +17,14 @@ const Projects = () => {
                 </div>
             </div>
             <div className="mt-16">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-3 md:gap-6">
                     {projectsData.slice(0, 4).map((project, i) => (
                         <div
                             id={`sticky-card-${i + 1}`}
                             key={'project' + i}
-                            className="sticky-card w-full mx-auto max-w-2xl sticky top-40">
-                            <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                                <ProjectCard project={project} />
+                            className={`sticky-card w-full mx-auto sticky top-48 flex flex-col gap-8`}>
+                            <div className="max-w-2xl mx-auto box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+                                <ProjectDescriptionCard project={project} />
                             </div>
                         </div>
                     ))}
