@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
 
-function Blog({ blogs }: {blogs:any}) {
+function Blog({ blogs }: Readonly<{blogs:any}>) {
 
   return (
       <div
@@ -17,7 +17,7 @@ function Blog({ blogs }: {blogs:any}) {
               </div>
           </div>
 
-          <div className="flex justify-center my-5 lg:py-8 sticky top-40">
+          <div className="flex justify-center my-5 lg:py-8">
               <div className="flex  items-center">
                   <span className="w-full h-[2px] bg-[#1a1443]"></span>
                   <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
