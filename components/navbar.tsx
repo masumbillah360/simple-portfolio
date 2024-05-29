@@ -64,9 +64,9 @@ function Navbar() {
                                         : `/#${sectionIds[route.path]}`
                                 }>
                                 <div
-                                    className={`text-sm text-white transition-colors duration-300 hover:text-pink-600 font-semibold ${
+                                    className={`text-white transition-colors duration-300 hover:text-pink-600 font-semibold ${
                                         activeSection === route.path
-                                            ? 'text-pink-600'
+                                            ? 'text-pink-600 border-b'
                                             : ''
                                     }`}>
                                     {route.label}
